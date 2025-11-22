@@ -1,0 +1,17 @@
+PG_USER = postgres
+PG_HOST = localhost
+PG_DATABASE = database
+PG_PASSWORD = password
+PG_PORT = 5432
+
+ACCESS_TOKEN_SECRET=someaccesssecret
+REFRESH_TOKEN_SECRET=somerefreshsecret
+
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=redispassword
+
+NODE_ENV = development
+
+PORT=3000
+NODE_ENV=development
