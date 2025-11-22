@@ -8,10 +8,16 @@
   └─ Router Mount: app.use("/users", userRoutes)
            |
            v
+[routes/auth.js]  ← Router handles user-related routes
+  ├─ router.post("/register", validate(registerSchema), registerUser)   ← Register new user
+  ├─ router.post("/login", validate(loginSchema), loginUser)            ← Login
+  └─ router.post("/refresh", refresh)                                    ← Refresh tokens
+           |
+           v
 [routes/users.js]  ← Router handles user-related routes
   ├─ router.get("/", ...)        ← calls getUsers()
   ├─ router.get("/ids", ...)     ← calls getUserIds()
-  └─ router.post("/login", ...)  ← calls authenticateUser()
+  └─ router.get("/usernames", ...)  ← calls getUsernames()
            |
            v
 [models/User.js]  ← Model layer handles DB logic
